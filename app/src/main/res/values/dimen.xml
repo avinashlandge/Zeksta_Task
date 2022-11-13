@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_5sp">5sp</dimen>
+    <dimen name="margin_10sp">10sp</dimen>
+    <dimen name="margin_11sp">11sp</dimen>
+    <dimen name="margin_12sp">12sp</dimen>
+
+
+    <dimen name="tvsize_12sp">12sp</dimen>
+
+</resources>

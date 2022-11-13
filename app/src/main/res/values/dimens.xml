@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_7sp">7sp</dimen>
+    <dimen name="dimen_size160sp">170dp</dimen>
+    <dimen name="tvsize_18sp">18sp</dimen>
+</resources>

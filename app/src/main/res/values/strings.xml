@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Zeksta Task</string>
+    <string name="txt_hint_productname">Product Name</string>
+    <string name="txt_hint_productprice">Price : $123.5</string>
+    <string name="txt_hint_productqty">Qty : 12</string>
+    <string name="redio_btn_red">Red</string>
+    <string name="redio_btn_green">Green</string>
+    <string name="redio_btn_blue">Blue</string>
+    <string name="tv_product_list">Product Lists</string>
+    <string name="tv_product_summary">Product Summary</string>
+</resources>
