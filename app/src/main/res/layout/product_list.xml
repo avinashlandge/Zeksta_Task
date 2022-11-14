@@ -10,14 +10,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="@dimen/padding_10dp"
         tools:ignore="MissingConstraints">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProduct"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/margin_10sp"
             android:src="@drawable/product_placeholder"
             app:civ_border_color="#808080"
             app:civ_border_width="2dp" />
@@ -26,7 +26,7 @@
             android:id="@+id/lytDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/margin_10sp"
             android:layout_toRightOf="@+id/imgProduct"
             android:orientation="vertical">
 
@@ -37,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_7sp"
                 android:text="@string/txt_hint_productname"
+                android:textSize="@dimen/tvsize_18sp"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -47,13 +48,13 @@
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/txt_hint_productprice"
                 android:textColor="@color/black"
-                android:textSize="@dimen/tvsize_12sp" />
+                android:textSize="@dimen/tvsize_14sp" />
 
             <RadioGroup
                 android:id="@+id/rdGrp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_7sp"
+                android:layout_marginTop="@dimen/margin_5sp"
                 android:orientation="horizontal">
 
                 <RadioButton

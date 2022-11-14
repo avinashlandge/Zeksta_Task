@@ -19,8 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_product_list"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -39,20 +39,20 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="No data"
-        android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tvsize_14sp"
         android:visibility="gone" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/btn_50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="@dimen/margin_20sp"
+        android:layout_marginVertical="@dimen/margin_10sp"
         android:text="Submit Product"
         android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textColor="@color/white"
+        android:textSize="@dimen/tvsize_18sp" />
 
 </RelativeLayout>
