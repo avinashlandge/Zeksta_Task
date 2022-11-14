@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     {
         productViewModel.getProductArrayList().observe(this, productArrayList ->
         {
-            System.out.println("myJson : " + new Gson().toJson(productArrayList));
+
 
             if (productArrayList != null && !productArrayList.isEmpty())
             {

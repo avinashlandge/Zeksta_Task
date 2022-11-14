@@ -85,9 +85,7 @@ public class ProductListAdapter extends RecyclerView.Adapter
                 if (selPos!=0)
                 {
                     productArrList.get(position).getBrand().get(selPos).setIsSelected(productArrList.get(position).getBrand().get(selPos).getName());
-                    System.out.println("SelectString : "+ productArrList.get(position).getBrand().get(selPos).getIsSelected());
                 }
-                System.out.println("SelectString_1 : "+productArrList.get(position).getBrand().get(selPos).getName());
 
             }
 
