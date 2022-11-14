@@ -32,12 +32,13 @@ public class SummeryActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         productList = getIntent().getParcelableArrayListExtra("data");
-        System.out.println("Click_JSON : "+new Gson().toJson(productList));
+
         if (productList != null && !productList.isEmpty())
         {
 
             binding.txtNoData.setVisibility(View.GONE);
             binding.rvProductList.setVisibility(View.VISIBLE);
+
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
             binding.rvProductList.setLayoutManager(linearLayoutManager);
 

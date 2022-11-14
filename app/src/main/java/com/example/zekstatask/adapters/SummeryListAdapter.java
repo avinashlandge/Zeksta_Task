@@ -52,9 +52,13 @@ public class SummeryListAdapter extends RecyclerView.Adapter {
         viewHolderClass.binding.txtProductName.setText("" + productArrList.get(position).getProductName());
         viewHolderClass.binding.txtPrice.setText("Price : " + productArrList.get(position).getPrice());
         viewHolderClass.binding.txtSelectedcolors.setText(productArrList.get(position).getSelectedColor());
+
+
         String selectedBrand="";
-        for(int i=0;i<productArrList.get(position).getBrand().size();i++){
-            if(!productArrList.get(position).getBrand().get(i).getIsSelected().equals("Select Brand")) {
+        for(int i=0;i<productArrList.get(position).getBrand().size();i++)
+        {
+            if(!productArrList.get(position).getBrand().get(i).getIsSelected().equals("Select Brand"))
+            {
                 selectedBrand = productArrList.get(position).getBrand().get(i).getName();
             }
         }

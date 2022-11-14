@@ -23,23 +23,27 @@ import com.example.zekstatask.models.Product;
 import java.util.ArrayList;
 
 
-public class ProductListAdapter extends RecyclerView.Adapter {
+public class ProductListAdapter extends RecyclerView.Adapter
+{
     private ArrayList<Product> productArrList;
     Context context;
 
-    public ProductListAdapter(ArrayList<Product> productArrList, Context context) {
+    public ProductListAdapter(ArrayList<Product> productArrList, Context context)
+    {
         this.productArrList = productArrList;
         this.context = context;
     }
 
     @Override
-    public int getItemViewType(int position) {
+    public int getItemViewType(int position)
+    {
         return position;
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
         ProductListBinding binding = ProductListBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new ViewHolder(binding);
     }
@@ -51,6 +55,7 @@ public class ProductListAdapter extends RecyclerView.Adapter {
 
         viewHolderClass.binding.txtProductName.setText("" + productArrList.get(position).getProductName());
         viewHolderClass.binding.txtPrice.setText("Price : " + productArrList.get(position).getPrice());
+
         Glide.with(context)
                 .load(productArrList.get(position).getPicture())
                 .error(R.drawable.product_placeholder)
@@ -58,7 +63,9 @@ public class ProductListAdapter extends RecyclerView.Adapter {
                 .into(viewHolderClass.binding.imgProduct);
 
         ArrayList<String> bradName = new ArrayList<>();
-        if(!productArrList.get(position).getBrand().get(0).getIsSelected().equals("")) {
+
+        if(!productArrList.get(position).getBrand().get(0).getIsSelected().equals(""))
+        {
             productArrList.get(position).getBrand().add(0, new Brand("-1", "Select Brand", "Select Brand"));
         }
         for (int i = 0; i < productArrList.get(position).getBrand().size(); i++)
@@ -93,14 +100,18 @@ public class ProductListAdapter extends RecyclerView.Adapter {
 
         viewHolderClass.binding.rdGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (radioGroup.getCheckedRadioButtonId()) {
+            public void onCheckedChanged(RadioGroup radioGroup, int i)
+            {
+                switch (radioGroup.getCheckedRadioButtonId())
+                {
                     case R.id.rdRed:
                         productArrList.get(position).setSelectedColor("Red");
                         break;
+
                     case R.id.rdBlue:
                         productArrList.get(position).setSelectedColor("Blue");
                         break;
+
                     case R.id.rdGreen:
                         productArrList.get(position).setSelectedColor("Green");
                         break;
@@ -109,8 +120,11 @@ public class ProductListAdapter extends RecyclerView.Adapter {
             }
         });
 
-        for (int i = 0; i < productArrList.get(position).getColors().size(); i++) {
-            switch (productArrList.get(position).getColors().get(i).toLowerCase()) {
+        for (int i = 0; i < productArrList.get(position).getColors().size(); i++)
+        {
+
+            switch (productArrList.get(position).getColors().get(i).toLowerCase())
+            {
                 case "red":
                     viewHolderClass.binding.rdRed.setVisibility(View.VISIBLE);
                     break;

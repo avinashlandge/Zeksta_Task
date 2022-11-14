@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isValid()) {
+                if (isValid())
+                {
                     Intent i = new Intent(MainActivity.this,SummeryActivity.class);
                     i.putExtra("data",productList);
                     startActivity(i);
@@ -54,10 +55,14 @@ public class MainActivity extends AppCompatActivity {
         setAdapter();
     }
 
-    private void setAdapter(){
-        productViewModel.getProductArrayList().observe(this, productArrayList -> {
+    private void setAdapter()
+    {
+        productViewModel.getProductArrayList().observe(this, productArrayList ->
+        {
             System.out.println("myJson : " + new Gson().toJson(productArrayList));
-            if (productArrayList != null && !productArrayList.isEmpty()) {
+
+            if (productArrayList != null && !productArrayList.isEmpty())
+            {
 
                 productList = productArrayList;
 
@@ -68,13 +73,15 @@ public class MainActivity extends AppCompatActivity {
 
                 ProductListAdapter adapter = new ProductListAdapter(productArrayList, MainActivity.this);
                 binding.rvProductList.setAdapter(adapter);
-            } else {
+
+            }
+            else
+            {
                 binding.txtNoData.setVisibility(View.VISIBLE);
                 binding.rvProductList.setVisibility(View.GONE);
             }
 
         });
-        ///dsdhjffgf
     }
 
 
