@@ -20,7 +20,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_product_list"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="@dimen/tvsize_20sp" />
 
     </androidx.appcompat.widget.Toolbar>
 

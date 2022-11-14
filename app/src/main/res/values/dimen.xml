@@ -14,5 +14,6 @@
     <dimen name="tvsize_14sp">14sp</dimen>
     <dimen name="btn_50dp">55dp</dimen>
     <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="tvsize_20sp">20sp</dimen>
 
 </resources>
